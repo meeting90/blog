@@ -4,7 +4,7 @@
 {% when "disqus" %}
   {% include meeting90/comments-providers/disqus %}
 {% when "duoshuo" %}
-  {% include meeting90/comments-provider/duoshuo %}
+  {% include meeting90/comments-providers/duoshuo %}
 {% endcase %}
 
 {% endif %}
