@@ -5,8 +5,8 @@
         <description>袁明珠的个人博客 - meeting90</description>
         <link>http://blog.meeting90.com</link>
         <link>http://blog.meeting90.com</link>
-        <lastBuildDate>2013-12-07T00:55:10+08:00</lastBuildDate>
-        <pubDate>2013-12-07T00:55:10+08:00</pubDate>
+        <lastBuildDate>2013-12-07T01:11:46+08:00</lastBuildDate>
+        <pubDate>2013-12-07T01:11:46+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -47,9 +47,9 @@
 把e.preventDefault()删除，然后再打开就能进行正常的超级拖放。 综合附近的代码来看，监听器是为了实现拖放图片上传的功能
 &lt;/p&gt;
 </description>
-                <link>http://blog.meeting90.com/web/javascript/2011/12/25/super-drag-invalid-in-renren-homepage-with-maxthon</link>
-                <guid>http://blog.meeting90.com/web/javascript/2011/12/25/super-drag-invalid-in-renren-homepage-with-maxthon</guid>
-                <pubDate>2011-12-25T00:00:00+08:00</pubDate>
+                <link>http://blog.meeting90.com/web/javascript/2013/12/25/super-drag-invalid-in-renren-homepage-with-maxthon</link>
+                <guid>http://blog.meeting90.com/web/javascript/2013/12/25/super-drag-invalid-in-renren-homepage-with-maxthon</guid>
+                <pubDate>2013-12-25T00:00:00+08:00</pubDate>
         </item>
 
 

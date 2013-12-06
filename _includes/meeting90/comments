@@ -3,8 +3,8 @@
 {% case site.meeting90.comments.provider %}
 {% when "disqus" %}
   {% include meeting90/comments-providers/disqus %}
-{% when "custom" %}
-  {% include custom/comments %}
+{% when "duoshuo" %}
+  {% include meeting90/comments-provider/duoshuo %}
 {% endcase %}
 
 {% endif %}
