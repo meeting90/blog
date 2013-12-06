@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>袁明珠的个人博客</title>
+ <link href="http://blog.meeting90.com/" rel="self"/>
+ <link href="http://blog.meeting90.com"/>
+ <updated>2013-12-07T00:55:10+08:00</updated>
+ <id>http://blog.meeting90.com</id>
+ <author>
+   <name>meeting90</name>
+   <email>mzyuan90@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>人人网主页在遨游浏览器内超级拖放功能失效</title>
+   <link href="http://blog.meeting90.com/web/javascript/2011/12/25/super-drag-invalid-in-renren-homepage-with-maxthon"/>
+   <updated>2011-12-25T00:00:00+08:00</updated>
+   <id>http://blog.meeting90.com/web/javascript/2011/12/25/super-drag-invalid-in-renren-homepage-with-maxthon</id>
+   <content type="html">
+
+
+&lt;p class=&quot;paragraph&quot;&gt;
+很少在人人网主页使用超级拖放功能进行搜索，今天同学发了一条状态，“6.73很欢乐”。
+不知道6.73是什么意思，拖放搜了下，没出结果，我也没在意，直接又选中文字右键搜了下。
+排名第一的居然是豆瓣的一个帖子 ，说是Dota出6.73版了
+&lt;/p&gt;
+
+&lt;p class=&quot;paragraph&quot;&gt;
+后来同学回复我的状态说超级拖放不能用了，才想着看看是哪的问题。遨游的这类附加功能应该也是监听事件来实现的，
+去w3cshool查DOM和javascript中对的事件的支持，并没有拖放事件。不过遨游兼容模式是IE内核，极速模式是WEBKit内核，
+去网上搜 &quot;IE 拖放事件&quot;，查出来微软在IE里面增加了拖放事件的监听，搜weikit支持的事件，也有对拖放事件的支持。
+这样问题就大概清楚了，估计是人人网的javascript脚本拦截或者覆盖了拖放事件，导致遨游浏览器收不到触发的拖放事件，
+所以拖放后没有任何反应
+&lt;/p&gt;
+
+&lt;p class=&quot;paragraph&quot;&gt;
+用遨游自带的开发者工具看了看人人网js脚本里监听的事件，发现home.js中有代码监听了dragover事件，代码如下：
+&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_8f8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;_8f8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;dragover&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;preventDefault&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p class=&quot;paragraph&quot;&gt;
+就是这段代码造成超级拖放失效，代码获取了document的body节点，然后附加拖放事件的监听，如果拖放事件发生了，
+代码会调用后面的匿名函数进行处理，e.preventDefault()拦截了事件，通知浏览器不要执行与事件关联的默认动作，
+所以当拖放操作发生后，遨游收不到拖放操作发生的通知。 通过实验验证，把人人网主页另存到本地，找到这段代码，
+把e.preventDefault()删除，然后再打开就能进行正常的超级拖放。 综合附近的代码来看，监听器是为了实现拖放图片上传的功能
+&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

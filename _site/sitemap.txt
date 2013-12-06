@@ -1,0 +1,11 @@
+
+http://blog.meeting90.com/about.html
+http://blog.meeting90.com/atom.xml
+http://blog.meeting90.com/categories.html
+http://blog.meeting90.com/index.html
+http://blog.meeting90.com/posts.html
+http://blog.meeting90.com/rss.xml
+http://blog.meeting90.com/sitemap.txt
+http://blog.meeting90.com/timeline.html
+
+http://blog.meeting90.com/web/javascript/2011/12/25/super-drag-invalid-in-renren-homepage-with-maxthon
