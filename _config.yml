@@ -1,9 +1,9 @@
 pygments: true
 encoding: utf-8
 safe:        false
-#permalink: /:categories/:year/:month/:day/:title 
-#exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-baseurl: /blog
+permalink: /:categories/:year/:month/:day/:title 
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+#baseurl: /blog
 # 分页配置，每页最多显示几篇文章
 paginate: 4
 # 修改为自己的配置
