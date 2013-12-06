@@ -1,0 +1,14 @@
+{% if site.safe and site.meeting90.analytics.provider and page.meeting90.analytics != false %}
+
+{% case site.meeting90.analytics.provider %}
+{% when "google" %}
+  {% include meeting90/analytics-providers/google %}
+{% when "getclicky" %}
+  {% include meeting90/analytics-providers/getclicky %}
+{% when "mixpanel" %}
+  {% include meeting90/analytics-providers/mixpanel %}
+{% when "custom" %}
+  {% include custom/analytics %}
+{% endcase %}
+
+{% endif %}
