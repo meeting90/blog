@@ -1,25 +1,11 @@
-source:      .
-destination: ./_site
-plugins:     ./_plugins
-layouts:     ./_layouts
-
 pygments: true
 encoding: utf-8
-
 safe:        false
-baseurl:     /
-url:         http://localhost:4000
-lsi:         false
-
 permalink: /:categories/:year/:month/:day/:title 
-
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-
-baseurl: ./blog
-lsi: true
+baseurl: /blog
 # 分页配置，每页最多显示几篇文章
 paginate: 4
-
 # 修改为自己的配置
 title : 袁明珠的个人博客
 tagline: 爱coding，爱生活
