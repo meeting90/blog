@@ -112,7 +112,7 @@ mysql 5.1或更高版本 [下载地址](http://dev.mysql.com/downloads/mysql/)
 书写test.php,将文件放在htdocs文件夹下,访问host/test.php  这里host=114.212.82.207
 
 
-> mysql_connect("localhost", "root", "33063306") or die(mysql_error());
+> mysql\_connect("localhost", "root", "33063306") or die(mysql\_error());
 
 > echo "Connected to MySQL<br/>";
 
