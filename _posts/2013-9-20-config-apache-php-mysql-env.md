@@ -62,11 +62,11 @@ mysql 5.1或更高版本 [下载地址](http://dev.mysql.com/downloads/mysql/)
 > PHpIniDir "D:/php"
 
 
-![php_module](/images/posts/php_module.png)
+![php_module]({{BASE_PATH}}/images/posts/php_module.png)
 
 添加对php index 的支持
 
-![php_index](/images/posts/php_index.png)
+![php_index]({{BASE_PATH}}/images/posts/php_index.png)
 
 搜索DirectoryIndex 在其后加入index.php
 
@@ -78,7 +78,7 @@ mysql 5.1或更高版本 [下载地址](http://dev.mysql.com/downloads/mysql/)
 
 > AddType application/x-httpd-php .html
 
-![php_AddType](/images/posts/php_addtype.png)
+![php_AddType]({{BASE_PATH}}/images/posts/php_addtype.png)
 
 修改访问权限
 
@@ -89,25 +89,25 @@ mysql 5.1或更高版本 [下载地址](http://dev.mysql.com/downloads/mysql/)
 > Header set Access-Control-Allow-Origin "*"
 
 
-此外需要将LoadModule headers_module modules/mod_headers.so前的#去掉
+此外需要将LoadModule headers\_module modules/mod\_headers.so前的#去掉
 
 #### 配置php文件php.ini
 
 
 将php.ini-product 重命名为php.ini,设置extension_dir 为ext，将其前的分号去掉
 
-![php extension_dir ](/images/posts/php_extension_dir.png)
+![php extension_dir ]({{BASE_PATH}}/images/posts/php_extension_dir.png)
 
 设置mysql 的extension
 
-![mysql extension](/images/posts/mysql_extension.jpg)
+![mysql extension]({{BASE_PATH}}/images/posts/mysql_extension.jpg)
 
 #### 测试
 
 
 通过ip地址访问index.html，表示apache工作中
 
-![apache works](images/posts/apache_works.png)
+![apache works]({{BASE_PATH}}/images/posts/apache_works.png)
 
 书写test.php,将文件放在htdocs文件夹下,访问host/test.php  这里host=114.212.82.207
 
@@ -119,4 +119,4 @@ mysql 5.1或更高版本 [下载地址](http://dev.mysql.com/downloads/mysql/)
 
 ****访问结果如下，表示apache+php+mysql配置成功****
 
-![finish](/images/posts/finish.jpg)
+![finish]({{BASE_PATH}}/images/posts/finish.jpg)
