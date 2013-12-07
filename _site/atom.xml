@@ -4,7 +4,7 @@
  <title>袁明珠的个人博客</title>
  <link href="http://blog.meeting90.com/" rel="self"/>
  <link href="http://blog.meeting90.com"/>
- <updated>2013-12-07T01:44:15+08:00</updated>
+ <updated>2013-12-07T13:32:09+08:00</updated>
  <id>http://blog.meeting90.com</id>
  <author>
    <name>meeting90</name>
@@ -13,45 +13,29 @@
 
  
  <entry>
-   <title>人人网主页在遨游浏览器内超级拖放功能失效</title>
-   <link href="http://blog.meeting90.com/web/javascript/2013/12/25/super-drag-invalid-in-renren-homepage-with-maxthon"/>
-   <updated>2013-12-25T00:00:00+08:00</updated>
-   <id>http://blog.meeting90.com/web/javascript/2013/12/25/super-drag-invalid-in-renren-homepage-with-maxthon</id>
-   <content type="html">
-
-
-&lt;p class=&quot;paragraph&quot;&gt;
-很少在人人网主页使用超级拖放功能进行搜索，今天同学发了一条状态，“6.73很欢乐”。
-不知道6.73是什么意思，拖放搜了下，没出结果，我也没在意，直接又选中文字右键搜了下。
-排名第一的居然是豆瓣的一个帖子 ，说是Dota出6.73版了
+   <title>学车那些事</title>
+   <link href="http://blog.meeting90.com/life/2013/12/07/things-about-leaning-drive"/>
+   <updated>2013-12-07T00:00:00+08:00</updated>
+   <id>http://blog.meeting90.com/life/2013/12/07/things-about-leaning-drive</id>
+   <content type="html">&lt;p class=&quot;paragraph&quot;&gt;
+lz电子已经练了快五个月了，加起来也快40次了，你要是隔一周没有去，教练就当你前面没有去过。真心难！！！还好，终于要在这个月25考试了。
 &lt;/p&gt;
 
 &lt;p class=&quot;paragraph&quot;&gt;
-后来同学回复我的状态说超级拖放不能用了，才想着看看是哪的问题。遨游的这类附加功能应该也是监听事件来实现的，
-去w3cshool查DOM和javascript中对的事件的支持，并没有拖放事件。不过遨游兼容模式是IE内核，极速模式是WEBKit内核，
-去网上搜 &quot;IE 拖放事件&quot;，查出来微软在IE里面增加了拖放事件的监听，搜weikit支持的事件，也有对拖放事件的支持。
-这样问题就大概清楚了，估计是人人网的javascript脚本拦截或者覆盖了拖放事件，导致遨游浏览器收不到触发的拖放事件，
-所以拖放后没有任何反应
+虽然练车练的很郁闷，但是这过程中总有些让人觉得温馨的故事。上次有个电子系的帅哥载我一程使我顺利赶上了班车。这次的故事就在班车上。
 &lt;/p&gt;
 
 &lt;p class=&quot;paragraph&quot;&gt;
-用遨游自带的开发者工具看了看人人网js脚本里监听的事件，发现home.js中有代码监听了dragover事件，代码如下：
+lz练完车走到班车停靠点已经略晚，最后一个位置已经被先我一步的一位美女坐上了。lz为了不落下任何一个可能的座位，来回巡视了下无果。就走到前面找一个能够让我在整个行车过程中能够站稳的地方。可没过多久，从后面走来一位小帅哥(目测他比我小)。他跟我讲后面有一个座位让我去坐，我有一点迟疑，不过还是跟着他去后面看看，并跟他道谢。走到跟前才发现是他自己的位置用他的书包占着，让给我的。我问他自己不坐么，他说他不坐，他说因为看到我也是南大的，所以让给我，我没反应过来这其中有什么必然的联系，继续表示我的感谢。然后他就走到前面去了，我就坐下了。
 &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_8f8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;_8f8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;dragover&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;preventDefault&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p class=&quot;paragraph&quot;&gt;
-就是这段代码造成超级拖放失效，代码获取了document的body节点，然后附加拖放事件的监听，如果拖放事件发生了，
-代码会调用后面的匿名函数进行处理，e.preventDefault()拦截了事件，通知浏览器不要执行与事件关联的默认动作，
-所以当拖放操作发生后，遨游收不到拖放操作发生的通知。 通过实验验证，把人人网主页另存到本地，找到这段代码，
-把e.preventDefault()删除，然后再打开就能进行正常的超级拖放。 综合附近的代码来看，监听器是为了实现拖放图片上传的功能
+故事就是这样的，心里很温暖。
 &lt;/p&gt;
-</content>
+
+&lt;p class=&quot;paragraph&quot;&gt;
+不过看着他站着，我坐着，心里也有些不安。我是不是应该感谢他然后坚持让他自己坐呢？在公交车上我给一些老人让坐，他们有的都坚持不坐的。
+&lt;/p&gt;</content>
  </entry>
  
  

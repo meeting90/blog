@@ -8,4 +8,4 @@ http://blog.meeting90.com/rss.xml
 http://blog.meeting90.com/sitemap.txt
 http://blog.meeting90.com/timeline.html
 
-http://blog.meeting90.com/web/javascript/2013/12/25/super-drag-invalid-in-renren-homepage-with-maxthon
+http://blog.meeting90.com/life/2013/12/07/things-about-leaning-drive
