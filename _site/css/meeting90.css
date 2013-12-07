@@ -1,9 +1,24 @@
+/*---------------------------------------
+stylesheet, ported from Codepiano's blog:
+codepiano.github.io
+------------------*/
+/* =============================================================================
+#     FileName: meeting90.css
+#         Desc: stylesheet for blog
+#       Author: codepiano
+#        Email: anyexingchen999@qq.com
+#     HomePage: http://www.weibo.com/anyexingchen
+#      Version: 0.0.1
+#   LastChange: 2013-05-14 14:13:41
+#      History:
+============================================================================= */
 
 @charset "utf-8";
 
 /* a标签样式 */
 a {
   text-decoration: none;
+  
   -webkit-transition: all 0.15s ease-in-out;
      -moz-transition: all 0.15s ease-in-out;
        -o-transition: all 0.15s ease-in-out;
@@ -25,7 +40,10 @@ a:active {
 }
 
 a:visited {
-  color: #FF6699;
+  color: #044869;
+}
+a:visited:hover {
+  color: #FF9900;
 }
 
 /* 让页面字体更有质感 */
@@ -36,7 +54,7 @@ body {
 /* 主页中央区域 */
 html, body, div.wrapper {
   height: 100%;
-  background-color: #F3F3F3;
+  background-color: #F9F9F9;
 }
 
 /* 段落样式 */
@@ -46,49 +64,74 @@ html, body, div.wrapper {
 }
 
 /* font-awesome post信息按钮样式 */
-.icon-folder-open, .icon-tags, .icon-calendar {
+.fa fa-folder-open, .fa fa-tags, .fa fa-calendar {
   color:#A84365;
 }
 
-.icon-double-angle-right {
+.fa fa-double-angle-right {
   color: #FF6699;
 }
 
 /* 自定义高亮样式 */
 .highlight pre,code {
   font-size: 15px;
-  background-color: #002B36;
-  color:#93A1A1;
+  background-color: #ECECEC;
+  color: #145201;
+}
+
+/* 自定义高亮样式 */
+pre code {
+  font-size: 15px;
+  color: #145201;
 }
 
 blockquote {
   font-size: 15px;
-  background-color: #002B36;
-  color:#93A1A1;
 }
 
 blockquote p {
   font-size: 15px;
+  line-height: 1.8;
 }
+.typo blockquote p {
+  margin-bottom: 0em;
+}
+
 /* 覆盖bootstrap导航条设置 */
-a.brand {
+.navbar  a.navbar-brand {
   height: auto;
 }
 
+.navbar .col-md-8 {
+  -webkit-transition: all 0.4s ease-in-out;
+     -moz-transition: all 0.4s ease-in-out;
+       -o-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+}
+
+.navbar .col-md-8:hover {
+  /*background: 180px url('/image/giant-head.png') no-repeat;*/
+}
+
 .navbar ul.nav {
-  padding: 15px 20px 15px;
+  padding: 5px 20px 0px;
   height:auto;
 }
 
-.navbar>.navbar-inner{
+.navbar>.container{
   padding-left: 0px;
   padding-right: 0px;
   border-left: none;
   border-right: none;
+  width: 100%;
+}
+
+.navbar>.container ul li{
+  float: left;
 }
 
 /* 覆盖导航条激活菜单的背景色设置 */
-.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
+.nav>li>a, .nav>li>a:hover, .nav>li>a:focus {
   background-color: transparent;
   box-shadow:none;
 }
@@ -109,19 +152,27 @@ ul.tag_box > li:first-child {
 /* 标题栏文字样式 */
 .site-title {
   color: #1B813F;
-   -webkit-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
      -moz-transition: all 0.2s ease-in-out;
        -o-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
 }
 
+.site-title:hover {
+  text-shadow: #1B813F 0px 0px 15px;
+}
+
 .site-author {
-  font-size: 28px;
   color: #169FDE;
-   -webkit-transition: all 0.2s ease-in-out;
+  font-size: 28px;
+  -webkit-transition: all 0.2s ease-in-out;
      -moz-transition: all 0.2s ease-in-out;
        -o-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
+}
+
+.site-author:hover {
+  text-shadow: #169FDE 0px 0px 30px;
 }
 
 /* 底部div定位 */
@@ -147,7 +198,69 @@ ul.nav.nav-tabs {
   list-style: none;
 }
 
+/* 技术支持列表样式 */
+ul#support {
+  margin-top: 20px;
+}
 
+.dispear {
+  border-color: #F3F3F3;
+}
+
+ul#support.dispear>li {
+  display:none;
+}
+
+ul#support.dispear>li:first-child {
+  display:block;
+}
+
+ul#support.dispear>li>a {
+  border-color: #F3F3F3;
+  color: #F3F3F3;
+}
+
+ul#support.dispear>li>a:hover {
+  background-color: transparent;
+}
+
+
+ul#support.dispear>li:first-child>a:hover {
+  color: #CC527A;
+}
+
+ul#support.dispear>li:first-child>a>i.fa fa-star-empty {
+  color: #F3F3F3;
+}
+
+ul#support.dispear>li:first-child>a:hover>i.fa fa-star-empty {
+  color: #E8175D;
+}
+
+#support.show a {
+  color: #CC527A;
+}
+
+.nav-tabs>li.active>a {
+  border-bottom-color: #ddd;
+}
+
+.fa fa-ok, .fa fa-star-empty {
+  color: #E8175D;
+}
+
+ul#support.show {
+  border-color: #F3F3F3;
+}
+
+ul#support.show li {
+  display:block;
+}
+
+ul#support.show a {
+  border-color: #DDDDDD;
+  color:#CC527A;
+}
 
 /* 文章日期样式 */
 .post-date {
@@ -164,14 +277,19 @@ table#post-data td, table#post-data th {
   color: #1077BC;
 }
 
-table#post-data .icon-calendar, table#post-data .icon-bookmark, table#post-data .icon-tags {
+table#post-data .fa fa-calendar, table#post-data .fa fa-bookmark, table#post-data .fa fa-tags {
   color: #1077BC;
+}
+
+table .post-date{
+  width: 12em;
 }
 
 table#post-data a:hover {
   color: #FF6699;
 }
 
+/*  */
 div.row {
   margin-left: 0px;
   margin-right: 0px;
@@ -179,14 +297,19 @@ div.row {
 
 /* 覆盖bootstrap默认的tooltip设置 */
 div.tooltip.right .tooltip-arrow {
-  border-right-color: #1693A7;
+  border-right-color: rgb(255, 138, 73);
+}
+div.tooltip.top .tooltip-arrow {
+  border-top-color: rgb(255, 138, 73);
 }
 
 div.tooltip-inner {
   font-size: 14px;
   color: #F3F3F3;
-  background-color: #1693A7;
+  background-color: rgb(255, 138, 73);
+  text-shadow: 0 0;
 }
+
 
 /* 归档和时间线页面列表样式 */
 ul.posts-list {
@@ -209,8 +332,11 @@ a.post-url {
   margin-left: 2px;
 }
 
+.post-featured {
+}
+
 span.post-right-info {
-  right: 0px;
+  right: 0;
   position: absolute;
   font-size: 16px;
   color: #BBBBBB;
@@ -232,11 +358,11 @@ ul.time-list a {
   color: #FF6699;
 }
 
-ul.time-list a>i.icon-chevron-right{
+ul.time-list a>i.fa fa-chevron-right{
   color: #F3F3F3;
 }
 
-ul.time-list>li.active>a>i.icon-chevron-right {
+ul.time-list>li.active>a>i.fa fa-chevron-right {
   color: #333333;
 }
 
@@ -250,6 +376,10 @@ ul#time-list-ul a{
 
 ul#time-list-ul a:hover{
   background-color: #ddd;
+}
+
+ul.nav-tabs {
+  border-bottom: none;
 }
 
 /* about样式 */
@@ -367,4 +497,3 @@ del {
 .post {
  border-top-width: 5px;
 }
-
