@@ -3,6 +3,7 @@
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"{{ site.meeting90.comments.duoshuo.short_name }}"};
         (function() {
+        		console.info("duoshuo");
                 var ds = document.createElement('script');
                 ds.type = 'text/javascript';ds.async = true;
                 ds.src = 'http://static.duoshuo.com/embed.js';

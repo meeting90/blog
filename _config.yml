@@ -7,6 +7,8 @@ baseurl: /blog
 # 分页配置，每页最多显示几篇文章
 paginate: 4
 
+markdown: redcarpet
+
 # 修改为自己的配置
 
 excerpt_separator: <!-- more -->

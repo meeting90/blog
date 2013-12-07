@@ -9,4 +9,6 @@ http://blog.meeting90.com/sitemap.txt
 http://blog.meeting90.com/timeline.html
 
 http://blog.meeting90.com/life/2013/12/07/things-about-leaning-drive
+http://blog.meeting90.com/apache/2013/09/20/config-apache-php-mysql-env
+http://blog.meeting90.com/life/2013/06/02/new-blog-new-start
 http://blog.meeting90.com/life/2012/03/23/dingdang-is-so-nice
