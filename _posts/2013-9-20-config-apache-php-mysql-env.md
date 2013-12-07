@@ -82,7 +82,7 @@ mysql 5.1或更高版本 [下载地址](http://dev.mysql.com/downloads/mysql/)
 
 修改访问权限
 
-![access](/images/posts/access.png)
+![access]({{BASE_PATH}}/images/posts/access.png)
 
 在 <Directory ".../htdocs">后加入如下访问权限：
 
@@ -100,14 +100,14 @@ mysql 5.1或更高版本 [下载地址](http://dev.mysql.com/downloads/mysql/)
 
 设置mysql 的extension
 
-![mysql extension]({{BASE_PATH}}/images/posts/mysql_extension.jpg)
+![mysql extension]({{BASE_PATH}}/images/posts/mysql_extension.png)
 
 #### 测试
 
 
 通过ip地址访问index.html，表示apache工作中
 
-![apache works]({{BASE_PATH}}/images/posts/apache_works.png)
+![apache works]({{BASE_PATH}}/images/posts/apache_works.jpg)
 
 书写test.php,将文件放在htdocs文件夹下,访问host/test.php  这里host=114.212.82.207
 
