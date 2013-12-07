@@ -1,20 +1,13 @@
 
-/* =============================================================================
-#     FileName: meeting90.css
-#         Desc: stylesheet for blog
-#       Author: meeting90
-#        Email: anyexingchen999@qq.com
-#     HomePage: http://www.weibo.com/anyexingchen
-#      Version: 0.0.1
-#   LastChange: 2013-05-14 14:13:41
-#      History:
-============================================================================= */
-
 @charset "utf-8";
 
 /* a标签样式 */
 a {
   text-decoration: none;
+  -webkit-transition: all 0.15s ease-in-out;
+     -moz-transition: all 0.15s ease-in-out;
+       -o-transition: all 0.15s ease-in-out;
+          transition: all 0.15s ease-in-out;
 }
 
 a:link {
@@ -33,6 +26,11 @@ a:active {
 
 a:visited {
   color: #FF6699;
+}
+
+/* 让页面字体更有质感 */
+body {
+  text-shadow: 0 1px 0 #ffffff;
 }
 
 /* 主页中央区域 */
@@ -110,13 +108,20 @@ ul.tag_box > li:first-child {
 
 /* 标题栏文字样式 */
 .site-title {
-  font-size: 14px;
   color: #1B813F;
+   -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
 }
 
 .site-author {
   font-size: 28px;
   color: #169FDE;
+   -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
 }
 
 /* 底部div定位 */
@@ -142,65 +147,7 @@ ul.nav.nav-tabs {
   list-style: none;
 }
 
-/* 技术支持列表样式 */
-ul#support {
-  margin-top: 20px;
-}
 
-.dispear {
-  border-color: #F3F3F3;
-}
-
-ul#support.dispear>li {
-  display:none;
-}
-
-ul#support.dispear>li:first-child {
-  display:block;
-}
-
-ul#support.dispear>li>a {
-  border-color: #F3F3F3;
-  color: #F3F3F3;
-}
-
-ul#support.dispear>li>a:hover {
-  background-color: transparent;
-}
-
-
-ul#support.dispear>li:first-child>a:hover {
-  color: #CC527A;
-}
-
-ul#support.dispear>li:first-child>a>i.icon-star-empty {
-  color: #F3F3F3;
-}
-
-ul#support.dispear>li:first-child>a:hover>i.icon-star-empty {
-  color: #E8175D;
-}
-
-#support.show a {
-  color: #CC527A;
-}
-
-.icon-ok, .icon-star-empty {
-  color: #E8175D;
-}
-
-ul#support.show {
-  border-color: #F3F3F3;
-}
-
-ul#support.show li {
-  display:block;
-}
-
-ul#support.show a {
-  border-color: #DDDDDD;
-  color:#CC527A;
-}
 
 /* 文章日期样式 */
 .post-date {
@@ -227,6 +174,7 @@ table#post-data a:hover {
 
 div.row {
   margin-left: 0px;
+  margin-right: 0px;
 }
 
 /* 覆盖bootstrap默认的tooltip设置 */
@@ -244,6 +192,7 @@ div.tooltip-inner {
 ul.posts-list {
   list-style: none;
   position: relative;
+  padding: 0px;
 }
 
 ul.posts-list li{
@@ -267,6 +216,11 @@ span.post-right-info {
   color: #BBBBBB;
 }
 
+/* 覆盖bootstrap默认的li格式 */
+li {
+line-height: 25px;
+}
+
 
 /* 时间锚点的样式 */
 ul.time-list {
@@ -286,6 +240,18 @@ ul.time-list>li.active>a>i.icon-chevron-right {
   color: #333333;
 }
 
+ul#time-list-ul a{
+  margin-bottom: -3px;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+ul#time-list-ul a:hover{
+  background-color: #ddd;
+}
+
 /* about样式 */
 p.about {
   text-indent: 2em;
@@ -301,3 +267,104 @@ table#about-me td{
 table#about-me a{
   color: #1077BC;
 }
+
+/* 目录的tab样式，继承自bootstrap 2.x版本 */
+.tabbable:before, .tabbable:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+#categories-nav {
+  float: right;
+  margin-left: 19px;
+  border-left: 1px solid #ddd;
+}
+
+.tabs-right>.nav-tabs>li {
+float: none;
+}
+
+.tab-content {
+  overflow: auto;
+}
+
+hr.hr-strong {
+  border-bottom: 5px groove #cfcfcf;
+}
+ 
+h2.title
+{
+  text-shadow: 2px 2px 2px #D0D0D0;
+}
+
+.post h4
+{
+  text-shadow: 1px 1px 2px #D0D0D0;
+}
+
+/* 帖子板块的鼠标动画效果 */
+.well {
+  -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.well:hover {
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 使帖子定位更精确 */
+.post-full {
+    position: relative;
+}
+
+
+/* 精华帖缎带的效果 */
+.featured-ribbon {
+  position: absolute;
+  background:url('/image/featured-small-full.png') no-repeat;
+  width: 80px;
+  height: 42px;
+  margin-top: -24px;
+  margin-left: -21px;
+  padding-top: 15px;
+  cursor: pointer;
+  
+  /*
+  -webkit-transition: margin-top 0.2s ease;
+     -moz-transition: margin-top 0.2s ease;
+       -o-transition: margin-top 0.2s ease;
+          transition: margin-top 0.2s ease;
+  */
+}
+.featured-ribbon:hover {
+  background-position:0 -43px;
+}
+
+/* 因为我很爱用<del>, 我觉得得修饰一下。。 */
+del {
+  color: rgb(185, 185, 185);
+}
+
+/* 帖子内的图片修饰 */
+.post img{
+  display: block; margin-left: auto; margin-right: auto;
+  padding: 5px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  border: 1px solid #ddd;
+  max-width: 100%;
+}
+
+/* 帖子的特殊装饰 */
+.post {
+ border-top-width: 5px;
+}
+
