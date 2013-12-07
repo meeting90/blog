@@ -3,7 +3,7 @@ encoding: utf-8
 safe:        true
 permalink: /:categories/:year/:month/:day/:title 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-#baseurl: /blog
+baseurl: /blog
 # 分页配置，每页最多显示几篇文章
 paginate: 4
 
