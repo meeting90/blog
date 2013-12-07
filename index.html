@@ -6,7 +6,7 @@ title: meeting9017
 <!-- 按照分页插入博客文章 -->
 {% for post in paginator.posts %}
 <div class="well typo post post-index">
-  <h2 class="title"><a href="{{ post.url }}">
+  <h2 class="title"><a href="{{BASE_PATH}}{{ post.url }}">
   {{ post.title }}
   {% if post.tagline %}
     <small>{{ post.tagline }}</small>
