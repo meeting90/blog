@@ -5,10 +5,18 @@
     <title>{{ page.title }}</title>
     {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+
+
     <meta name="author" content="{{ site.author.name }}">
 
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ site.production_url }}{{ page.url }}" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ page.description }}" />
+
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -16,8 +24,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/typo.css" rel="stylesheet">
     <link href="/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link href="/css/solarized.css" rel="stylesheet" type="text/css" media="all">
@@ -25,15 +34,17 @@
     <link href="/css/meeting90.css" rel="stylesheet">
 
     <!-- javascript files -->
-    <script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="/js/datatables-bootstrap.js"></script>
+ 
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/meeting90.js"></script>
 
+    <link rel="shortcut icon" href="images/favicon.ico">
     <!-- Le fav and touch icons -->
     <!-- Update these with your own images
-    <link rel="shortcut icon" href="images/favicon.ico">
+   
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
@@ -80,7 +91,7 @@
       <div class="span2">
       </div>
       <div class="span8 text-center">
-        &mdash;&nbsp;&nbsp;<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" class="license">原创作品许可 &mdash; 署名-非商业性使用-禁止演绎 3.0 未本地化版本 &mdash; CC BY-NC-ND 3.0 </a>&nbsp;&nbsp;&mdash;
+        &mdash;&nbsp;&nbsp; &copy; 袁明珠 Powered by GitHub <a href="https://github.com/mojombo/jekyll" target="_blank">jekyll</a>&nbsp;&nbsp;&mdash;
       </div>
       <div class="span2">
       </div>
