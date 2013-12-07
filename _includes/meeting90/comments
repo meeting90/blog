@@ -1,4 +1,4 @@
-{% if site.meeting90.comments.provider and page.comments != false %}
+{% if site.meeting90.comments.provider %}
 
 {% case site.meeting90.comments.provider %}
 {% when "disqus" %}

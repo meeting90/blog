@@ -5,8 +5,8 @@
         <description>袁明珠的个人博客 - meeting90</description>
         <link>http://blog.meeting90.com</link>
         <link>http://blog.meeting90.com</link>
-        <lastBuildDate>2013-12-07T21:10:55+08:00</lastBuildDate>
-        <pubDate>2013-12-07T21:10:55+08:00</pubDate>
+        <lastBuildDate>2013-12-07T21:56:26+08:00</lastBuildDate>
+        <pubDate>2013-12-07T21:56:26+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -65,6 +65,8 @@
 
 &lt;p&gt;按照向导安装即可&lt;/p&gt;
 
+&lt;!-- more --&gt;
+
 &lt;h4&gt;配置Apache2.2 http.conf 文件&lt;/h4&gt;
 
 &lt;p&gt;加载PHP module&lt;/p&gt;
@@ -72,7 +74,7 @@
 &lt;p&gt;搜索LoadModule 在其下添加两行：&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;LoadModule php5&lt;em&gt;module &amp;quot;D:/php/php5apache2&lt;/em&gt;2.dll&amp;quot;&lt;/p&gt;
+&lt;p&gt;LoadModule php5_module &amp;quot;D:/php/php5apache2_2.dll&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;PHpIniDir &amp;quot;D:/php&amp;quot;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -107,7 +109,7 @@
 &lt;p&gt;Header set Access-Control-Allow-Origin &amp;quot;*&amp;quot;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;此外需要将LoadModule headers&lt;em&gt;module modules/mod&lt;/em&gt;headers.so前的#去掉&lt;/p&gt;
+&lt;p&gt;此外需要将LoadModule headers_module modules/mod_headers.so前的#去掉&lt;/p&gt;
 
 &lt;h4&gt;配置php文件php.ini&lt;/h4&gt;
 
@@ -123,12 +125,12 @@
 
 &lt;p&gt;通过ip地址访问index.html，表示apache工作中&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/posts/apache_works.png&quot; alt=&quot;apache works&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/apache_works.png&quot; alt=&quot;apache works&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;书写test.php,将文件放在htdocs文件夹下,访问host/test.php  这里host=114.212.82.207&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;mysql&lt;em&gt;connect(&amp;quot;localhost&amp;quot;, &amp;quot;root&amp;quot;, &amp;quot;33063306&amp;quot;) or die(mysql&lt;/em&gt;error());&lt;/p&gt;
+&lt;p&gt;mysql_connect(&amp;quot;localhost&amp;quot;, &amp;quot;root&amp;quot;, &amp;quot;33063306&amp;quot;) or die(mysql_error());&lt;/p&gt;
 
 &lt;p&gt;echo &amp;quot;Connected to MySQL&lt;br/&gt;&amp;quot;;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -136,54 +138,10 @@
 &lt;p&gt;*&lt;strong&gt;&lt;em&gt;访问结果如下，表示apache+php+mysql配置成功&lt;/em&gt;&lt;/strong&gt;*&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/finish.jpg&quot; alt=&quot;finish&quot;&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
 </description>
                 <link>http://blog.meeting90.com/apache/2013/09/20/config-apache-php-mysql-env</link>
                 <guid>http://blog.meeting90.com/apache/2013/09/20/config-apache-php-mysql-env</guid>
                 <pubDate>2013-09-20T00:00:00+08:00</pubDate>
-        </item>
-
-        <item>
-                <title>New blog, new start, memories off</title>
-                <description>&lt;p&gt;&lt;em&gt;&amp;quot;红花当然配绿叶. 这一辈子谁来陪. 渺渺茫茫来又回. 往日情景再浮现. 藕虽断了丝还连. 轻叹世间事多变迁&amp;quot;&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;!--彻底斩断一年多的单相思后--&gt; 
-
-&lt;p&gt;从最后一次写博客到现在
-，我停写了大概五个月的博客。从那之后我的休息时间比之前空余出来不少，可总提不起兴致来写博客。&lt;/p&gt;
-
-&lt;p&gt;不过，五个月来我也没有闲着。因为时间多了，就有空停下来放慢节奏： 翻翻已经积了很久灰的工具书，逛逛网上牛人们的博客，同时也补充积累了不少非计算机专业的知识。&lt;/p&gt;
-
-&lt;p&gt;我捉摸着，是到了继续写博客的时候了。
-为了督促自己行动起来，我决定把博客迁移到 &lt;del&gt;牛逼烘烘的&lt;/del&gt; &lt;a href=&quot;http://pages.github.com/,&quot; title=&quot;GitHub Pages&quot;&gt;GitHub Pages&lt;/a&gt;上。&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;之前的博客是用的&lt;a href=&quot;http://blog.csdn.net/pengx17&quot;&gt;CSDN在线博客&lt;/a&gt;服务。我是最近才知道了静态博客系统这种看起来很Geek的玩意儿。
-&lt;a href=&quot;http://www.cnblogs.com/cuxnil/archive/2013/01/08/2850458.html&quot;&gt;网上&lt;/a&gt;提到了几种其他的流行的博客系统，
-发现GitHub Pages上面原生支持的是Jekyll，我一拍脑门，就用它得了。&lt;/p&gt;
-
-&lt;p&gt;经过一个周末的时间，我浏览了一些关于用Jekyll在GitHub Pages上搭建静态博客的文章。
-了解了一些常用操作后后，就把之前在CSDN的几篇博文转移到了这里。&lt;/p&gt;
-
-&lt;p&gt;因为笔者主要在Windows平台上开发，而Jekyll在Windows上的支持性并不好，导致迁移博客时出现了非常多的文件编译错误问题，让人焦头烂额。&lt;/p&gt;
-
-&lt;p&gt;短暂的使用过后，我觉得静态博客系统最厉害的地方在于它抛弃了MySQL的使用。
-在线的动态内容，比如帖子的留言和评论，被云端的评论服务系统所替代托管。
-例如本博客使用的&lt;a href=&quot;http://disqus.com/&quot;&gt;DISQUS&lt;/a&gt;。可能是我孤陋寡闻好久没关注业内消息了，不过看到这个想法的时候确实让我眼前一亮。跟这个类似的还有著名的
-&lt;a href=&quot;http://en.gravatar.com/&quot;&gt;Gravatar头像托管&lt;/a&gt;，用户在评论时填写了邮箱，博客程序会自动查找在Gravatar上是否有与之绑定的头像，一劳永逸。&lt;/p&gt;
-
-&lt;p&gt;虽然Jekyll提供给用户很高的自由度和高度定制的自动化机制，但用Jekyll写博客还是不如所见即所得的在线博客写起来更方便更直观一些，并且作为普通的博客用户来说学习曲线过陡了点。
-这就像是学校里大家写论文时对于文档编辑器的选择了：普通青年用Word，文艺青年用LaTex，二逼青年用写字板。&lt;/p&gt;
-
-&lt;p&gt;最后，感谢博客的主题原作者&lt;a href=&quot;http://codepiano.github.io/about.html&quot;&gt;codepiano&lt;/a&gt;提供的中文本地化的博客模板。很合我胃口, &lt;del&gt;呵呵&lt;/del&gt; 。&lt;/p&gt;
-</description>
-                <link>http://blog.meeting90.com/life/2013/06/02/new-blog-new-start</link>
-                <guid>http://blog.meeting90.com/life/2013/06/02/new-blog-new-start</guid>
-                <pubDate>2013-06-02T00:00:00+08:00</pubDate>
         </item>
 
         <item>
