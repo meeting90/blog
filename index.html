@@ -1,44 +1,55 @@
 ---
 layout: index
-title: meeting90
+title: meeting9017
 ---
 {% include meeting90/setup %}
 <!-- 按照分页插入博客文章 -->
 {% for post in paginator.posts %}
-  <h2 class="title"><a href="{{BASE_PATH}}{{ post.url }}">{{ post.title }}</a></h2>
+<div class="well typo post post-index">
+  <h2 class="title"><a href="{{ post.url }}">
+  {{ post.title }}
+  {% if post.tagline %}
+    <small>{{ post.tagline }}</small>
+  {% endif %}
+  </a></h2>
   <div class="post_info">
   {% unless post.categories == empty %}
-  <ul class="tag_box inline">
-    <li><i class="icon-calendar"></i></li>
+  <ul class="tag_box inline list-inline">
+    <li><i class="fa fa-calendar"></i></li>
     <li id="post-date">{{ post.date | date: " %Y 年 %m 月 %d 日" }}</li>
-    <li><i class="icon-folder-open"></i></li>
+    <li><i class="fa fa-folder-open"></i></li>
     {% assign post_categories = post.categories %}
     {% include meeting90/post_categories_info %}
   </ul>
-  {% endunless %}
-  <span>
+  {% endunless %}  
+  <span> 
   </div>
   <div class="archive">
+    {% if post.tldr %}
+    {{ post.excerpt }}
+    <a href="{{ post.url }}" > >> 继续阅读 <<  </a>
+  {% else %}
     {{ post.content }}
+  {% endif %}
   </div>
-  <hr />
+</div>
   {% endfor %}
-
+  
   <!-- 分页页码展示 -->
-  <div id="post-pagination" class="pagination pagination-centered">
-    <ul>
+  <div id="post-pagination" class="text-center">
+    <ul class="pagination">
       <!-- 上一页按钮 -->
       {% if paginator.previous_page %}
       <li>
         {% if paginator.previous_page == 1 %}
-        <a href="/"><i class="icon-chevron-left"></i></a>
+        <a href="/"><i class="fa fa-chevron-left"></i></a>
         {% else %}
-        <a href="/page{{ paginator.previous_page }}"><i class="icon-chevron-left"></i></a>
+        <a href="/page{{ paginator.previous_page }}"><i class="fa fa-chevron-left"></i></a>
         {% endif %}
       </li>
       {% else %}
       <li class="disabled">
-      <span><i class="icon-chevron-left"></i></span>
+      <span><i class="fa fa-chevron-left"></i></span>
       </li>
       {% endif %}
 
@@ -67,13 +78,12 @@ title: meeting90
 
       {% if paginator.next_page %}
       <li>
-      <a href="/page{{ paginator.next_page }}"><i class="icon-chevron-right"></i></a>
+      <a href="/page{{ paginator.next_page }}"><i class="fa fa-chevron-right"></i></a>
       </li>
       {% else %}
       <li class="disabled">
-      <a href="#"><i class="icon-chevron-right"></i></a>
+      <a href="#"><i class="fa fa-chevron-right"></i></a>
       </li>
       {% endif %}
     </ul>
   </div>
-

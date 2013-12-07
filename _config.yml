@@ -6,7 +6,10 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 #baseurl: /blog
 # 分页配置，每页最多显示几篇文章
 paginate: 4
+
 # 修改为自己的配置
+
+excerpt_separator: <!-- more -->
 title : 袁明珠的个人博客
 tagline: 爱coding，爱生活
 author :

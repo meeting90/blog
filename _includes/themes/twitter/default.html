@@ -5,10 +5,7 @@
     <title>{{ page.title }}</title>
     {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-
-
     <meta name="author" content="{{ site.author.name }}">
-
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,34 +14,29 @@
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:description" content="{{ page.description }}" />
 
-
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <!-- Le styles -->
-
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/typo.css" rel="stylesheet">
     <link href="/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="/css/solarized.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/css/datatables-bootstrap.css" rel="stylesheet">
+    <link href="/css/syntax.css" rel="stylesheet" type="text/css" media="all">
     <link href="/css/meeting90.css" rel="stylesheet">
-
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
+    
     <!-- javascript files -->
- 
-
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/meeting90.js"></script>
-
-    <link rel="shortcut icon" href="images/favicon.ico">
+    
+    <link rel="shortcut icon" href="/image/favicon.ico">
     <!-- Le fav and touch icons -->
     <!-- Update these with your own images
-   
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
@@ -62,14 +54,12 @@
   <body id="scroll-pane" data-spy="scroll" data-target="#time-list-nav">
     <div class="wrapper">
       <!-- 导航条 -->
-      <div class="navbar">
-        <div class="navbar-inner row-fluid">
-          <div class="span2">
-          </div>
-          <div class="span8">
-            <a class="brand" href="{{ HOME_PATH }}">
-              <span class="site-author"> {{ site.author.name }} </span>
-              <span class="site-title"> /* {{ site.title }} */ </span>
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="row container">
+          <div class="col-md-8 col-md-offset-2">
+            <a class="navbar-brand" href="{{ HOME_PATH }}">
+                <span class="site-author"> {{ site.author.name }} </span>
+                <small><span class="site-title"> {{ site.title }} </span></small>
             </a>
             <ul class="nav">
               {% assign pages_list = site.pages %}
@@ -77,26 +67,20 @@
               {% include meeting90/navigation_list %}
             </ul>
           </div>
-          <div class="span2">
-          </div>
         </div>
-      </div>
+      </nav>
 
       <!-- 正文 -->
       {{ content }}
-
-    </div>
-    <!-- 底部声明 -->
-    <div class="row-fluid bottom">
-      <div class="span2">
-      </div>
-      <div class="span8 text-center">
-        &mdash;&nbsp;&nbsp; &copy; 袁明珠 Powered by GitHub <a href="https://github.com/mojombo/jekyll" target="_blank">jekyll</a>&nbsp;&nbsp;&mdash;
-      </div>
-      <div class="span2">
+      <!-- 底部声明 -->
+      <div class="row bottom">
+        <small>
+          <div class="col-md-8 text-center col-md-offset-2">
+          &copy; 袁明珠Powered by GitHub <a href="https://github.com/mojombo/jekyll" target="_blank">jekyll</a>
+          </div>
+        </small>
       </div>
     </div>
-
     {% include meeting90/analytics %}
   </body>
 </html>
