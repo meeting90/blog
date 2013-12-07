@@ -57,7 +57,7 @@ mysql 5.1或更高版本 [下载地址](http://dev.mysql.com/downloads/mysql/)
 搜索LoadModule 在其下添加两行：
 
 
-> LoadModule php5_module "D:/php/php5apache2_2.dll"
+> LoadModule php5\_module "D:/php/php5apache2\_2.dll"
 
 > PHpIniDir "D:/php"
 
