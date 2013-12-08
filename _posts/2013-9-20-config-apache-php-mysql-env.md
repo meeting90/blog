@@ -57,9 +57,8 @@ mysql 5.1或更高版本 [下载地址](http://dev.mysql.com/downloads/mysql/)
 搜索LoadModule 在其下添加两行：
 
 
-> LoadModule php5\_module "D:/php/php5apache2\_2.dll"
-
-> PHpIniDir "D:/php"
+    LoadModule php5_module "D:/php/php5apache2_2.dll"
+    PHpIniDir "D:/php"
 
 
 ![php_module]({{BASE_PATH}}/images/posts/php_module.png)
@@ -74,9 +73,8 @@ mysql 5.1或更高版本 [下载地址](http://dev.mysql.com/downloads/mysql/)
 
 搜索AddType 在其后加入两行：
 
-> AddType application/x-httpd-php .php
-
-> AddType application/x-httpd-php .html
+    AddType application/x-httpd-php .php
+    AddType application/x-httpd-php .html
 
 ![php_AddType]({{BASE_PATH}}/images/posts/php_addtype.png)
 
@@ -86,7 +84,7 @@ mysql 5.1或更高版本 [下载地址](http://dev.mysql.com/downloads/mysql/)
 
 在 <Directory ".../htdocs">后加入如下访问权限：
 
-> Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Origin "*"
 
 
 此外需要将LoadModule headers\_module modules/mod\_headers.so前的#去掉
@@ -112,10 +110,9 @@ mysql 5.1或更高版本 [下载地址](http://dev.mysql.com/downloads/mysql/)
 书写test.php,将文件放在htdocs文件夹下,访问host/test.php  这里host=114.212.82.207
 
 
-> mysql\_connect("localhost", "root", "33063306") or die(mysql\_error());
-
-> echo "Connected to MySQL<br/>";
-
+    mysql_connect("localhost", "root", "") or die(mysql_error());
+    echo "Connected to MySQL</br>";
+{:lang="php"}
 
 ****访问结果如下，表示apache+php+mysql配置成功****
 
