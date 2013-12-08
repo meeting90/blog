@@ -7,6 +7,7 @@ categories: [apache]
 tags: [configuration]
 group: archive
 icon: book
+tldr: true
 ---
 
 {% include meeting90/setup %}
