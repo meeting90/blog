@@ -4,7 +4,7 @@
  <title>袁明珠的个人博客</title>
  <link href="http://blog.meeting90.com/" rel="self"/>
  <link href="http://blog.meeting90.com"/>
- <updated>2013-12-08T15:45:57+08:00</updated>
+ <updated>2013-12-08T15:53:10+08:00</updated>
  <id>http://blog.meeting90.com</id>
  <author>
    <name>meeting90</name>
@@ -97,7 +97,13 @@
 
 &lt;h3 id=&quot;const-1&quot;&gt;const用于集合&lt;/h3&gt;
 
-&lt;p&gt;如 const int i[]={1,2,3,4};&lt;/p&gt;
+&lt;p&gt;如 &lt;/p&gt;
+
+&lt;p&gt;```cpp&lt;/p&gt;
+
+&lt;p&gt;const int i[]={1,2,3,4};&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
 
 &lt;p&gt;在这种情况下，const 意味着不能改变的一块存储空间，但是不能在编译期间使用它的值，编译器不知道该不能改变的存储空间中的存储内容。&lt;/p&gt;
 
@@ -105,10 +111,12 @@
 
 &lt;h3 id=&quot;const-2&quot;&gt;const指针&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;cpp
-const int *u;
-int const *u;
-&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;```cpp&lt;/p&gt;
+
+&lt;p&gt;const int *u;
+int const *u;&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
 
 &lt;p&gt;如上两种指针的定义表示”u 是一个指针（变量），它指向一个int常量,（指针可以移动） u=&amp;amp;c 是合法的。 *u=2 是不合法的&lt;/p&gt;
 
@@ -130,30 +138,27 @@ int const *u;
 
 &lt;p&gt;如果传递或返回一个地址（指针或引用）客户程序取地址并修改其初值是可能。有时需要阻止。采用const,如：&lt;/p&gt;
 
-&lt;p&gt;```cpp
-void u（const int *cip); &lt;/p&gt;
+&lt;p&gt;```cpp&lt;/p&gt;
 
-&lt;p&gt;const char *v();
-```&lt;/p&gt;
+&lt;p&gt;void u（const int *cip);
+const char *v();&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
 
 &lt;h3 id=&quot;const-3&quot;&gt;类中的const&lt;/h3&gt;
 
-&lt;p&gt;类中的(非static)const的含义是：”在类的一个对象的生命周期中它是一个常量“，该const在构造函数中初始化。eg：
-`
-``cpp&lt;/p&gt;
+&lt;p&gt;类中的(非static)const的含义是：”在类的一个对象的生命周期中它是一个常量“，该const在构造函数中初始化。eg：&lt;/p&gt;
 
-&lt;p&gt;class A{&lt;/p&gt;
+&lt;p&gt;``cpp&lt;/p&gt;
 
-&lt;p&gt;private：&lt;/p&gt;
+&lt;p&gt;class A{
+private：
+  const int size;
+public：
+A(int sz)： size(sz){}
+}&lt;/p&gt;
 
-&lt;p&gt;const int size;&lt;/p&gt;
-
-&lt;p&gt;public：&lt;/p&gt;
-
-&lt;p&gt;A(int sz)： size(sz){}&lt;/p&gt;
-
-&lt;p&gt;}
-```&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
 </content>
  </entry>
  
