@@ -5,8 +5,8 @@
         <description>袁明珠的个人博客 - meeting90</description>
         <link>http://blog.meeting90.com</link>
         <link>http://blog.meeting90.com</link>
-        <lastBuildDate>2013-12-08T16:10:42+08:00</lastBuildDate>
-        <pubDate>2013-12-08T16:10:42+08:00</pubDate>
+        <lastBuildDate>2013-12-08T16:26:56+08:00</lastBuildDate>
+        <pubDate>2013-12-08T16:26:56+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -50,19 +50,18 @@
 
 &lt;p&gt;通常C++编译器并不为const创建存储空间，将其定义保存在符号表中。当定义一个const时，必须为其赋上一个值,eg:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-    const int bufsize=200;
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre lang=&quot;c++&quot;&gt;&lt;code&gt;const int bufsize=200;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;如下几种情况例外：&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;const的定义一般在定义过的文件中才可见（内部连接），但是可以用extern来声明其他文件中定义的const值。eg:&lt;/li&gt;
-&lt;/ol&gt;
+&lt;ol lang=&quot;c++&quot;&gt;
+  &lt;li&gt;
+    &lt;p&gt;const的定义一般在定义过的文件中才可见（内部连接），但是可以用extern来声明其他文件中定义的const值。eg:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-    extern const int bufsize;
-&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;extern const int bufsize;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;此时，const由内部连接转变为外部连接，同时，编译器必须要为该常量分配存储空间。&lt;/p&gt;
 
@@ -90,9 +89,8 @@
 
 &lt;p&gt;如 &lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-    const int i[]={1,2,3,4};
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre lang=&quot;c++&quot;&gt;&lt;code&gt;const int i[]={1,2,3,4};
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;在这种情况下，const 意味着不能改变的一块存储空间，但是不能在编译期间使用它的值，编译器不知道该不能改变的存储空间中的存储内容。&lt;/p&gt;
 
@@ -100,10 +98,9 @@
 
 &lt;h3 id=&quot;const-2&quot;&gt;const指针&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;
-    const int *u;
-    int const *u;
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre lang=&quot;c++&quot;&gt;&lt;code&gt;const int *u;
+int const *u;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;如上两种指针的定义表示”u 是一个指针（变量），它指向一个int常量,（指针可以移动） u=&amp;amp;c 是合法的。 *u=2 是不合法的&lt;/p&gt;
 
@@ -125,23 +122,21 @@
 
 &lt;p&gt;如果传递或返回一个地址（指针或引用）客户程序取地址并修改其初值是可能。有时需要阻止。采用const,如：&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-    void u（const int *cip);
-    const char *v();
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre lang=&quot;c++&quot;&gt;&lt;code&gt;void u（const int *cip);
+const char *v();
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;const-3&quot;&gt;类中的const&lt;/h3&gt;
 
 &lt;p&gt;类中的(非static)const的含义是：”在类的一个对象的生命周期中它是一个常量“，该const在构造函数中初始化。eg：&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-    class A{
-    private：
-      const int size;
-    public：
-    	A(int sz)： size(sz){}
-    }
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre lang=&quot;c++&quot;&gt;&lt;code&gt;class A{
+private：
+  const int size;
+public：
+	A(int sz)： size(sz){}
+}
+&lt;/code&gt;&lt;/pre&gt;
 </description>
                 <link>http://blog.meeting90.com/thinkingincpp/2013/10/17/cpp-const</link>
                 <guid>http://blog.meeting90.com/thinkingincpp/2013/10/17/cpp-const</guid>
