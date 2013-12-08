@@ -5,9 +5,9 @@ permalink: /:categories/:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 baseurl: /blog
 # 分页配置，每页最多显示几篇文章
-paginate: 4
+paginate: 2
 
-markdown: redcarpet
+markdown: kramdown
 
 # 修改为自己的配置
 
