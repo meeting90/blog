@@ -79,11 +79,6 @@ html, body, div.wrapper {
   color:#93A1A1;
 }
 
-/* 自定义高亮样式 */
-pre code {
-  font-size: 15px;
-  color: #145201;
-}
 
 blockquote {
   font-size: 15px;
